@@ -48,6 +48,15 @@ tipOptions.forEach((option) =>
 );
 selectPerson.addEventListener("change", calculateTotal);
 
+// Reset button functionality
+resetBtn.addEventListener("click", () => {
+  document.getElementById("billingForm").reset();
+  baseAmountEl.textContent = "$0.00";
+  tipAmountEl.textContent = "$0.00";
+  personNumberEl.textContent = "$0.00";
+  totalAmountEl.textContent = "$0.00";
+});
+
 for (let i = 1; i <= 20; i++) {
   const option = document.createElement("option");
   option.value = i;
