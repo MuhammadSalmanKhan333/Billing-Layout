@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+:root {
+  --background-color: #73d2a7;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+.container .content {
+  border: 1px solid black;
+  background: white;
+  border-radius: 20px;
+  width: 1000px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px;
+}
+
+/* ================== Section 1====================== */
+.section1 {
+  width: 50%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 25px;
+}
+.billing-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.bill-total {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.bill-total .billField {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: 2px solid rgb(218, 218, 224);
+  font-size: 15px;
+}
+.bill-total .billField:focus {
+  border: none;
+}
+.tip-percent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tip-percent .tip-text {
+  font-size: 25px;
+  font-weight: 500;
+}
+.radiofields {
+  display: inline-flex;
+  gap: 15px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.radio-input {
+  display: none;
+}
+.radio-label {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  color: #ffffff;
+  background: var(--background-color);
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background 0.3s;
+}
+.radio-label:not(:last-of-type) {
+  margin-right: 10px;
+}
+.radio-input:checked + .radio-label {
+  background: #006856;
+}
+
+.split-total {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+.split-total label {
+  font-size: 25px;
+  font-weight: 500;
+}
+.split-total .selectfield {
+  appearance: none;
+  padding: 10px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+  outline: 2px solid rgb(218, 218, 224);
+}
+.split-total::after {
+  --size: 0.5rem;
+  position: absolute;
+  content: "";
+  top: 70%;
+  right: 10px;
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  pointer-events: none;
+}
+/* ================== Section 2====================== */
+.section2 {
+  width: 50%;
+  height: 100%;
+  border-radius: 15px;
+  border: 2px solid cornflowerblue;
+  background: #2b8c54;
+  padding: 25px;
+}
+.billing-info {
+  border: 2px solid rgb(25, 208, 122);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 34px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+.text {
+  font-size: large;
+}
+.custom-hr {
+  width: 100%;
+  height: 5px;
+  border-top: 1px solid #ffffffdb;
+  border-radius: 4px;
+  line-height: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.billing-info .reset {
+  font-size: 16px;
+  padding-block: 12px;
+  border-radius: 20px;
+  background: var(--background-color);
+  color: black;
+  font-weight: 500;
+  border: 2px solid var(--background-color);
+  text-transform: uppercase;
+}
+.billing-info .reset:hover {
+  background: #164329;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* ======================Media queries=================== */
+@media (max-width: 810px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .section1 {
+    border: 2px solid #009578;
+  }
+}
+@media (max-width: 630px) {
+  .radiofields {
+    flex-wrap: wrap;
+  }
+}
