@@ -190,4 +190,10 @@
   .radiofields {
     flex-wrap: wrap;
   }
+  .section1 {
+    width: 100%;
+  }
+  .section2 {
+    width: 100%;
+  }
 }
