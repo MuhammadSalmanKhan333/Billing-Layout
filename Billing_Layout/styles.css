@@ -119,7 +119,9 @@
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid black;
   pointer-events: none;
+  opacity: var(--after-opacity, 1);
 }
+
 /* ================== Section 2====================== */
 .section2 {
   width: 50%;
